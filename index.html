@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel de Administração de Produtos</title>
+  <link rel="stylesheet" href="styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <div class="dashboard-container">
+    
+    <!-- Cabeçalho do Painel -->
+    <header class="dashboard-header">
+      <h1>Painel de Produtos</h1>
+      <button id="addProductBtn">+ Novo Produto</button>
+    </header>
+
+    <!-- Formulário para cadastro de produto -->
+    <section class="form-section" id="productFormSection">
+      <h2>Adicionar Produto</h2>
+      <form id="productForm">
+        <input type="text" id="productName" placeholder="Nome do Produto" required />
+        <input type="number" id="productPrice" placeholder="Preço" required />
+        <input type="text" id="productCategory" placeholder="Categoria" required />
+        <select id="productStatus" required>
+          <option value="Ativo">Ativo</option>
+          <option value="Inativo">Inativo</option>
+        </select>
+        <button type="submit" id="saveBtn">Salvar</button>
+      </form>
+    </section>
+
+    <!-- Lista de Produtos -->
+    <section class="product-list" id="productList">
+      <!-- Os cards de produtos serão renderizados dinamicamente aqui -->
+    </section>
+
+  </div>
+
+  <!-- Script JS/TS -->
+  <script src="./dist/index.js"></script>
+</body>
+</html>
